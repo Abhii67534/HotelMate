@@ -1,0 +1,12 @@
+<form [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="Name" formControlName="GuestName">
+        <span style="color:red" *ngIf="GuestName && GuestName.invalid && GuestName.touched"> This field is required </span>
+        <input type="text" placeholder="Email" formControlName="Email">
+        <input type="date" placeholder="Check In Date" formControlName="CheckInDate">
+        <input type="date" placeholder="Check Out Date" formControlName="CheckOutDate">
+        <input type="number" placeholder="Room Number" formControlName="RoomNumber"> 
+
+
+
+    <button type="submit">Submit</button>
+</form>
